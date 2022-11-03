@@ -1,9 +1,5 @@
 import validator from './validator.js';
 
-
-console.log(validator);
-
-
 const buttonValidate = document.getElementById("iValidate");
 const inputCardNumber = document.getElementById("iCardNumber");
 const inputCardName = document.getElementById("iCardName");

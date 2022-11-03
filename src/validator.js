@@ -34,12 +34,11 @@ function reducirAUnDigito(nroDosDigitos) {
     let Decena = Math.floor(nroDosDigitos / 10);
 
     nroDosDigitos = (Residuo) + (Decena);
-
   }
   return (nroDosDigitos);
 }
 
-function invertirArreglo(myArray) {
+function invertirArreglo(myArray) { // podria usar reverse
   let i = 0;
   let newArray = [];
   let newLenght = myArray.length;
