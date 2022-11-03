@@ -40,25 +40,26 @@ Antes de iniciar a codear, debes entender el problema que quieres solucionar y
 cómo tu aplicación lo soluciona.
 
 * Primer prototipo con papel y lápiz (blanco y negro).
-![imagen prototipo-baja-fidelidad](imagenes/prototipo-baja-fidelidad.png)
-* Feedback:
+![imagen prototipo-baja-fidelidad](imagenes/prototipo-baja-fidelidad.png)  
+* **Feedback**:
     1. No se entiende donde ponen el número de la tarjeta, confunden los inputs, pero quizá con el prototipo de alta fidelidad se entienda mejor. 
     2. Para aportar creo que quizá podría faltar una casilla para ingresar el código de seguridad para hacer la transacción de pago (cómo en webpay).
-    3. Es una idea muy noble.
-
-* Segundo prototipo de baja fidelidad usando [Figma](https://www.figma.com/).
-![imagen 1er-prototipo-baja](imagenes/1er-prototipo-baja.png)
-
-* Primer prototipo alta fidelidad usando [Figma](https://www.figma.com/).
-![imagen 1er-prototipo-alta](imagenes/1er-prototipo-alta.png).
-
+    3. Es una idea muy noble.  
+* Segundo prototipo de baja fidelidad usando [Figma](https://www.figma.com/)  
+![imagen 1er-prototipo-baja](imagenes/1er-prototipo-baja.png)  
+* Primer prototipo alta fidelidad usando [Figma](https://www.figma.com/)  
+![imagen 1er-prototipo-alta](imagenes/1er-prototipo-alta.png)  
 1. Se entiende el propósito de la página.
 2. Los colores podrían mejorar.
-3. Se asemeja a un documento imprimible.
+3. Se asemeja a un documento imprimible.   
 * Prototipo final alta fidelidad usando [Figma](https://www.figma.com/)
 ![imagen 2do-prototipo-alta](imagenes/2do-prototipo-alta.png)
-1. Mejoré la legibilidad de las secciones, los inputs y botones.
-2. Apliqué la teoría del color, eligiendo una paleta de colores acorde al objetivo de la página y definiendo colores principales, secundarios y neutros.
+1. Apliqué la teoría del color, eligiendo una paleta de colores acorde al objetivo de la página y definiendo colores principales, secundarios y neutros.
+    - paleta de colores principales y secundarios. ![imagen paleta-colores-prin-sec](imagenes/paleta-colores-prin-sec.png)  
+
+    - paleta de colores neutros ![imagen neutros](imagenes/neutros.png)
+2. Mejoré la legibilidad de las secciones, los inputs y botones.
+
 3. Le di más dinamismo con figuras y contraste de colores.
 
 ## Visualmente (HTML y CSS)
@@ -82,13 +83,9 @@ En este archivo va el contenido que se mostrará al usuario (esqueleto HTML).
 
 ##### `src/style.css`
 
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus
-propias reglas, por eso NO está permitido el uso de frameworks de CSS
-(Bootstrap, materialize, etc).
+Este archivo contiene las reglas de estilo.  
+* Empecé creando una clase `.grilla` en el `<main >` para establecer la cuadricula principal del proyecto y ubicar los elementos del diseño tal y como está en el prototipo, encontré 3 columnas y 3 filas. Utilicé `display:grid` ![imagen grilla](imagenes/grilla.png)  para esto, también utilicé `grid-colum-start`, `grid-colum-end`, `grid-row-start`, `grid-row-end`para especificar algunas posiciones de inicio y final de un elemento.
 
-![imagen paleta-colores-prin-sec](imagenes/paleta-colores-prin-sec.png)
-
-![imagen neutros](imagenes/neutros.png)
 
 ## Funcionalmente (JavaScript - pruebas unitarias)
 
@@ -107,7 +104,13 @@ dos métodos (`isValid` y `maskify`):
 
 * **`validator.isValid(creditCardNumber)`**: `creditCardNumber` es un `string`
 con el número de tarjeta que se va a verificar. Esta función retorna un
-`boolean` dependiendo si es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).
+`boolean` dependiendo si es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).  
+    * **`invertirArreglo(myArray)`**:
+es una función que revierte el orden de los elementos de un arreglo, `myArray` es un `arreglo`.  Pude utilizar el método `reverse()`.  
+    * **`duplicarIntercaladoUnDigito(myArray)`**:
+es una función que aplica la operación multiplicar x 2 a los números de las posiciones impares del arreglo, y luego reduce a un dígito los valores hasta que sea necesario,`myArray` es un `arreglo`.  
+    * **`sumarArreglo(myArray)`**:
+es una función que aplica la operación de suma a los números del arreglo, incluyendo los nuevos valores, `myArray` es un `arreglo`.
 
 * **`validator.maskify(creditCardNumber)`**: `creditCardNumber` es un `string` con
 el número de tarjeta y esta función retorna un `string` donde todos menos
