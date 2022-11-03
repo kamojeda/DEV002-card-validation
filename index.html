@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Aquí está el contenido principal de la página-->
+  <main class="grilla">
+    <!-- Aquí empieza el encabezado principal que se mantendrá en todas las páginas del sitio web -->
+    <header>
+      <h1>Dona</h1>
+      <h2>sin salir de casa</h2>
+    </header>
+    <div class="encabezado grilla-col-span-2">
+      <p>un árbol.com</p>
+    </div>
+    <!-- Lado Izquierdo: Contiene una sección donde se explica la página web-->
+    <article class="lado izquierdo pequeño">
+      <p>La forma más sencilla y segura de ayudar al planeta.</p>
+    </article>
+    <article class="lado izquierdo grande">
+      <p>Regístrate en nuestra web y asocia una tarjeta de crédito
+        válida para donar de manera automática $1 dólar trimestral.</p>
+    </article>
+    <article class="lado izquierdo circulos1">
+      <p></p>
+      <p></p>
+    </article>
+    <article class="lado izquierdo circulos2">
+      <p></p>
+      <p></p>
+    </article>
+    <article class="lado izquierdo circulos3">
+      <p></p>
+      <p></p>
+    </article>
+    <article class="lado izquierdo circulos4">
+      <p></p>
+      <p></p>
+    </article>
+    <!-- Lado Derecho: Contiene una sección donde están los formularios-->
+    <section class="lado derecho">
+      <!-- Contiene un formulario para registrar datos de usuario-->
+      <form class="box-registrarse">
+        <h3>Regístrate para donar</h3>
+        <input type="text" id="iNombreUsuario" placeholder="Nombre de usuario" autofocus required>
+        <input type="email" id="iEmail" name="email" placeholder="Correo electrónico" autofocus required>
+        <button type="button" id="iGuardar" disabled autofocus required>
+          Guardar
+        </button>
+
+      </form>
+      <!-- Contiene un formulario para validar tarjeta de crédito-->
+      <form class="box-datos-tarjeta">
+        <h3>Asocia una tarjeta de crédito válida</h3>
+        <div class="anverso">
+          <div class="datos-tarjeta-fila">
+            <div class="nombre-empresa">Tarjeta de crédito</div>
+            <img data-logo src="imagenes/visa.svg" class="logo">
+          </div>
+          <fieldset class="form-group">
+            <legend>Datos de tarjeta</legend>
+            <label>Número de tarjeta</label>
+            <div class="horizontal-input-stack">
+              <input type="tel" id="iCardNumber" maxlength="16" aria-label="13 dígitos de su nro de tarjeta de crédito"
+                placeholder="4083952015263" autofocus required>
+            </div>
+          </fieldset>
+          <div class="input-row">
+            <div class="form-group name-group">
+              <label for="name">Nombre en la tarjeta</label>
+              <input type="text" id="iCardName" placeholder="Kamila Ojeda" pattern="[A-Za-z]{1,12}" autofocus required>
+            </div>
+            <fieldset class="form-group">
+              <legend>Expiración</legend>
+              <label for="expiration-month">mes/año</label>
+              <div class="horizontal-input-stack">
+                <select id="expiration-month" aria-label="Expiration Month" required>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+                <select id="expiration-year" aria-label="Expiration Year" required data-expiration-year>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                </select>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="reverso">
+          <div class="stripe"></div>
+          <div class="form-group cvv-group">
+            <label for="cvv">CVV</label>
+            <input class="cvv-input" type="tel" id="iCardCVV" maxlength="3" placeholder="123" autofocus required>
+          </div>
+        </div>
+        <button type="button" id="iValidate" disabled autofocus required>
+          Validar
+        </button>
+      </form>
+    </section>
+  </main>
+  <!-- Y aquí está nuestro pie de página principal que se utiliza en todas las páginas de nuestro sitio web -->
+  <footer grilla-col-span-3>
+    <p>donaunarbol.com</p>
+    <p>©Copyright 2050 de nadie. Todos los derechos revertidos.</p>
+  </footer>
+  <!-- Mensaje de bienvenida persnalizado-->
+  <!-- <section>
+      <button>Cambiar de usuario</button>
+    </section>-->
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
